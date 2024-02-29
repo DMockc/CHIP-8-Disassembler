@@ -21,6 +21,7 @@ std::pair<char*, size_t> loadFileInBuffer(std::ifstream& file)
 {
 	if (!file.is_open())
 	{
+		file.close();
 		return std::make_pair(nullptr, NULL);
 	}
 
